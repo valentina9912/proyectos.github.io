@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Escritura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .saved-text {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hoja de Escritura</h1>
+
+<textarea id="textInput" placeholder="Escribe aquí tu texto..."></textarea>
+<button onclick="saveText()">Guardar Texto</button>
+
+<div id="savedText" class="saved-text" style="display: none;"></div>
+
+<script>
+    let savedContent = '';
+
+    function saveText() {
+        const textInput = document.getElementById('textInput').value.trim();
+        
+        if (!textInput) {
+            alert("Por favor, escribe algo antes de guardar.");
+            return;
+        }
+
+        // Guardar el texto
+        savedContent = textInput;
+
+        // Limpiar el área de texto
+        document.getElementById('textInput').value = '';
+
+        // Mostrar el texto guardado
+        showSavedText();
+    }
+
+    function showSavedText() {
+        const savedTextDiv = document.getElementById('savedText');
+        savedTextDiv.textContent = savedContent; // Mostrar el texto guardado
+        savedTextDiv.style.display = 'block'; // Hacer visible el div
+    }
+</script>
+
+</body>
+</html>

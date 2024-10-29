@@ -1,0 +1,31 @@
+
+body{
+    background-image: url(11111.jpeg);
+}
+table {
+    width: 100%; /* Ancho total de la tabla */
+    border-collapse: collapse; /* Combina bordes */
+}
+
+th, td {
+    border: 2px solid #000000; /* Color del borde */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+th {
+    background-color: #007BFF; /* Color de fondo de las cabeceras */
+    color: rgb(0, 0, 0); /* Color del texto de las cabeceras */
+}
+
+td:hover {
+    background-color: #B0E0FF; /* Color de fondo al pasar el mouse */
+}
+
+td{
+    background-color: #ffffffd5;
+    padding: 15px;
+    color: #000000;
+}

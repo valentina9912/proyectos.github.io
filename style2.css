@@ -1,0 +1,126 @@
+/* Estilos Generales */
+html {
+    font-size: 10px;
+    /* Define el tamaño base de la fuente para todo el documento. Esto facilita el uso de valores rem para escalar el texto en otras partes. */
+    font-family: 'Open Sans', sans-serif;
+    /* Aplica la fuente 'Open Sans' a todo el contenido del sitio web. Si no está disponible, usa sans-serif como respaldo. */
+    background-color: rgb(216, 142, 142);
+    /* Establece un color de fondo gris suave para el sitio web, aplicado a todo el documento. */
+}
+
+body {
+    margin: 0;
+    /* Elimina los márgenes predeterminados del body para evitar espacios alrededor del contenido. */
+    padding: 0;
+    /* Elimina el padding predeterminado del body para que el contenido comience desde el borde de la ventana. */
+
+    padding-top: 50px; /* Ajusta el padding superior para evitar que el contenido quede debajo del menú */
+}
+
+/* Estilos del Menú de Navegación */
+.navbar {
+    background-color: rgb(198, 226, 226); /* Color de fondo del menú de navegación */
+    padding: 1rem; /* Espaciado interno del menú */
+    position: fixed; /* Fija el menú en la parte superior de la ventana */
+    top: 0; /* Alinea el menú en la parte superior de la página */
+    left: 0; /* Alinea el menú al borde izquierdo */
+    width: 100%; /* El menú ocupa todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros contenidos de la página */
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    /* Elimina los puntos de lista predeterminados de la lista desordenada (<ul>). */
+    margin: 0;
+    /* Elimina el margen predeterminado de la lista para que no haya espacio alrededor de ella. */
+    padding: 0;
+    /* Elimina el padding predeterminado de la lista para que no haya espacio dentro de los bordes de la lista. */
+    display: flex;
+    /* Utiliza flexbox para organizar los elementos de la lista (<li>) en una fila horizontal. */
+    justify-content: space-around;
+    /* Distribuye los elementos de la lista equitativamente con espacio entre ellos. */
+}
+
+.navbar li {
+    display: inline;
+    /* Asegura que cada elemento de la lista se muestre en línea horizontal, a pesar de estar en una lista. */
+}
+
+.navbar a {
+    color: black;
+    /* Establece el color del texto de los enlaces del menú a blanco para contrastar con el fondo azul. */
+    text-decoration: none;
+    /* Elimina el subrayado predeterminado de los enlaces. */
+    font-size: 18px;
+    /* Define el tamaño del texto de los enlaces a 18px (considerando la escala relativa de la fuente base). */
+    font-weight: bold;
+    /* Hace que el texto de los enlaces sea más grueso para hacerlo más visible. */
+    padding: 0.5rem 1rem;
+    /* Añade relleno interno de 0.5 rem en la parte superior e inferior, y 1 rem en los lados del enlace. */
+}
+
+.navbar a:hover {
+    background-color:white;
+    /* Cambia el color de fondo del enlace a un naranja brillante cuando el usuario pasa el ratón por encima. */
+    border-radius: 5px;
+    /* Redondea las esquinas del fondo del enlace para darle un efecto visual suave. */
+}
+
+/* Estilos de las Secciones */
+.section {
+    text-align: center;
+    /* Centra horizontalmente todo el contenido dentro de las secciones (título, texto, imágenes). */
+    padding: 50px;
+    /* Añade un relleno de 50px alrededor de todo el contenido de cada sección para espaciarlo de los bordes. */
+    border-bottom: 2px solid white;
+    /* Añade una línea de borde inferior azul oscuro de 2px de grosor para separar visualmente las secciones. */
+    background-color: rgb(185, 169, 169);
+    /* Establece un color de fondo naranja brillante para las secciones, creando contraste con el texto y el menú. */
+}
+
+.section h1 {
+    font-size: 36px;
+    /* Establece el tamaño del texto de los encabezados de las secciones a 36px, destacándolos del resto del texto. */
+    color: #004d7a;
+    /* Establece el color del texto del encabezado en azul oscuro para contrastar con el fondo naranja. */
+    margin-bottom: 20px;
+    /* Añade un margen inferior de 20px para crear espacio entre el título y el contenido que sigue. */
+}
+
+.section p {
+    font-size: 16px;
+    /* Establece el tamaño del texto de los párrafos dentro de las secciones a 16px, haciendo que el texto sea legible. */
+    line-height: 1.6;
+    /* Establece la altura de línea en 1.6, lo que mejora la legibilidad al aumentar el espacio entre líneas de texto. */
+    color: #333;
+    /* Establece el color del texto de los párrafos a un tono gris oscuro (#333) que es fácil de leer sobre el fondo naranja. */
+}
+
+.section img {
+    display: block;
+    /* Hace que la imagen sea un elemento de bloque, ocupando toda la línea y centrándose automáticamente. */
+    margin: 20px auto;
+    /* Añade un margen superior e inferior de 20px, y centra la imagen horizontalmente dentro de su contenedor. */
+    max-width: 70%;
+
+    width: 20 px;
+    /* Establece la imagen para que no exceda el ancho de su contenedor, adaptándose al tamaño de la pantalla. */
+}
+
+/* Estilos Responsivos para Dispositivos Móviles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        /* Cambia la disposición de los elementos de la lista en el menú a una columna en lugar de una fila. */
+        align-items: center;
+        /* Centra los elementos de la lista horizontalmente cuando están en disposición de columna. */
+    }
+
+    .navbar a {
+        display: block;
+        /* Hace que los enlaces del menú ocupen toda la línea (bloque completo) cuando están en columna. */
+        padding: 1rem;
+        /* Aumenta el padding de los enlaces para mejorar la interacción táctil en pantallas pequeñas. */
+    }
+}
